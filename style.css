@@ -7,6 +7,9 @@
 body {
     font-family: "Lato", sans-serif;
     --blue: hsl(210, 50%, 50%);
+    --grey: hsl(210, 50%, 90%);
+    background-color: hsl(210, 0%, 10%);
+    color: white;
 }
 
 .title {
@@ -17,12 +20,14 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 700px;
     margin: 20px auto;
     display: flex;
     border: 2px solid var(--blue);
-    border-radius: 5px;
+    border-right: 10px solid var(--blue);
     height: 50vh;
+    background-color: white;
+    color: black;
 }
 
 .container__users {
@@ -60,10 +65,36 @@ body {
     font-size: 18px;
 }
 
-.container__users__user-profile {
-    
+.container__user-profile {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container__user-profile {
+
+.container__user-profile__info {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid var(--grey);
+    flex-basis: 300px;
 }
+
+.container__user-profile__info > p {
+    color: hsl(210, 20%, 50%);
+    margin: 10px 0;
+}
+
+.container__user-profile__info__img {
+    width: 80px;
+    height: auto;
+}
+
+.container__user-profile__info__name {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
 
