@@ -62,6 +62,9 @@ let app = (() => {
         
         let user = _data[index];
 
+        clearActiveUserDOM();
+        activeUserDOM(index);
+        
         _userProfile.appendChild(createUserProfileDOM(user));
         
     }
@@ -112,5 +115,25 @@ let app = (() => {
         );
 
         return userProfileContainer;
+    }
+
+    function activeUserDOM(index) {
+        let usersListChildren = _usersList.children;
+
+        // for ( let i = 0; i < usersListChildren.length; i++ ) {
+        //     if (usersListChildren[i].getAttribute('index') == index) {
+        //         usersListChildren[i].classList.add('active');
+        //     }
+        // }
+
+        usersListChildren[index].classList.add('active');
+    }
+
+    function clearActiveUserDOM() {
+        let usersListChildren = _usersList.children;
+
+        for ( let i = 0; i < usersListChildren.length; i++ ) {
+            usersListChildren[i].classList.remove('active');
+        }
     }
 })();
